@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Background squircle gradient (light cyan/blue to sky blue) -->
+    <linearGradient id="squircleBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#BAE6FD" />
+      <stop offset="50%" stop-color="#7DD3FC" />
+      <stop offset="100%" stop-color="#38BDF8" />
+    </linearGradient>
+
+    <!-- Main Folder Front Blue Gradient -->
+    <linearGradient id="folderFrontGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2563EB" />
+      <stop offset="100%" stop-color="#1D4ED8" />
+    </linearGradient>
+
+    <!-- Folder Tab Back Dark Blue -->
+    <linearGradient id="folderBackGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1E40AF" />
+      <stop offset="100%" stop-color="#172554" />
+    </linearGradient>
+
+    <!-- Paper Sheet Gradient -->
+    <linearGradient id="paperGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#F1F5F9" />
+    </linearGradient>
+
+    <!-- Badge Circle Gradient -->
+    <linearGradient id="badgeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E40AF" />
+      <stop offset="100%" stop-color="#1D4ED8" />
+    </linearGradient>
+
+    <!-- Drop Shadows -->
+    <filter id="shadowMain" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#0284C7" flood-opacity="0.35"/>
+    </filter>
+
+    <filter id="badgeShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#0F172A" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Base App Squircle / Rounded Container -->
+  <rect x="36" y="36" width="440" height="440" rx="108" fill="url(#squircleBg)" filter="url(#shadowMain)" />
+  <rect x="38" y="38" width="436" height="436" rx="106" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-opacity="0.4" />
+
+  <!-- Back Folder Tab (Dark Navy) -->
+  <path d="M78 195 C78 180 90 168 105 168 L170 168 C182 168 192 174 198 182 L216 208 L405 208 C420 208 432 220 432 235 L432 370 C432 385 420 398 405 398 L105 398 C90 398 78 385 78 370 Z" fill="url(#folderBackGrad)" />
+
+  <!-- Medical Document / Paper Sheets inside Folder -->
+  <!-- Back Paper Accent -->
+  <rect x="180" y="110" width="220" height="230" rx="24" fill="#E2E8F0" />
+  
+  <!-- Main White Medical Sheet with Dark Border -->
+  <g>
+    <rect x="188" y="118" width="220" height="225" rx="24" fill="url(#paperGrad)" stroke="#1E40AF" stroke-width="12" />
+    
+    <!-- Medical Plus Symbol inside paper -->
+    <path d="M256 160 C256 156 259 153 263 153 L281 153 C285 153 288 156 288 160 L288 174 L302 174 C306 174 309 177 309 181 L309 199 C309 203 306 206 302 206 L288 206 L288 220 C288 224 285 227 281 227 L263 227 C259 227 256 224 256 220 L256 206 L242 206 C238 206 235 203 235 199 L235 181 C235 177 238 174 242 174 L256 174 Z" fill="#1E40AF" />
+    
+    <!-- Checklist / Document Lines inside paper -->
+    <rect x="325" y="165" width="62" height="12" rx="6" fill="#93C5FD" />
+    <rect x="325" y="195" width="62" height="12" rx="6" fill="#93C5FD" />
+    <rect x="325" y="225" width="46" height="12" rx="6" fill="#93C5FD" />
+    
+    <!-- Bottom line -->
+    <rect x="235" y="252" width="135" height="12" rx="6" fill="#93C5FD" />
+  </g>
+
+  <!-- Front Folder Body (Bright Blue with Curved Cutout) -->
+  <g>
+    <path d="M78 280 C78 256 94 242 118 242 L212 242 C226 242 238 248 248 258 L270 280 C278 288 288 292 298 292 L396 292 C418 292 434 306 434 328 L434 404 C434 428 416 448 392 448 L120 448 C96 448 78 428 78 404 Z" fill="url(#folderFrontGrad)" />
+    
+    <!-- Top Highlight Lip of Front Folder -->
+    <path d="M80 282 C80 260 96 244 118 244 L212 244 C226 244 238 250 248 260 L270 282 C278 290 288 294 298 294 L396 294 C417 294 432 307 433 328" fill="none" stroke="#93C5FD" stroke-width="6" stroke-linecap="round" />
+
+    <!-- White Label Slot on Folder -->
+    <rect x="122" y="336" width="140" height="34" rx="14" fill="#FFFFFF" opacity="0.95" />
+  </g>
+
+  <!-- Checkmark Badge on Bottom Right -->
+  <g filter="url(#badgeShadow)">
+    <!-- White outer rim -->
+    <circle cx="370" cy="385" r="74" fill="#FFFFFF" />
+    <!-- Blue inner circle -->
+    <circle cx="370" cy="385" r="62" fill="url(#badgeGrad)" />
+    
+    <!-- White bold checkmark -->
+    <path d="M336 384 L358 406 L404 358" fill="none" stroke="#FFFFFF" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>
